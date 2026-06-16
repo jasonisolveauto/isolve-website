@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const footerLinks = [
   { label: "Platform", href: "/platform" },
+  { label: "Scorecards", href: "/scorecards" },
   { label: "Sales", href: "/sales" },
   { label: "Finance", href: "/finance" },
   { label: "Service", href: "/service" },
@@ -21,7 +22,8 @@ export default function Footer() {
           <div className="text-base font-bold text-white">iSolve Automotive</div>
           <p className="mt-3 max-w-2xl leading-7">
             Dealership performance intelligence from lead to net profit,
-            connecting every department into one clearer operating view.
+            connecting every department, rooftop, OEM, and financial statement
+            into one clearer operating view.
           </p>
           <p className="mt-5">Copyright 2026 iSolve Automotive.</p>
         </div>

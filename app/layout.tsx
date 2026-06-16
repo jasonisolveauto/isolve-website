@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "iSolve Automotive | Dealership Performance Intelligence",
   description:
-    "Unify sales, finance, service, parts, accounting, financial statements, and executive reporting in one dealership performance intelligence platform.",
+    "Unify sales, finance, service, parts, accounting, financial statements, and executive reporting for one rooftop or a 100-store multi-OEM group.",
 };
 
 export default function RootLayout({

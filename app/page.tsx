@@ -3,6 +3,7 @@ import CTASection from "../components/CTASection";
 import FeatureCard from "../components/FeatureCard";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import ScreenshotShowcase from "./screenshot-showcase";
 
 const lifecycleCards = [
   "Lead Generation",
@@ -61,30 +62,33 @@ const aiQuestions = [
   "Which stores need immediate attention?",
 ];
 
-const mockups = [
+const scaleCards = [
   {
-    title: "Sales Dashboard",
-    metric: "184",
-    label: "Sold units",
-    bars: ["w-11/12", "w-8/12", "w-10/12", "w-7/12"],
+    title: "Single Rooftop",
+    text: "Give one store the same operating discipline as a large group: every department, every manager, every report, and every profit driver in one view.",
   },
   {
-    title: "Financial Statement View",
-    metric: "$412K",
-    label: "Net profit",
-    bars: ["w-10/12", "w-6/12", "w-9/12", "w-8/12"],
+    title: "Growing Dealer Group",
+    text: "Standardize reporting across rooftops while still respecting store-level differences, local leadership, and department accountability.",
   },
   {
-    title: "Advisor Scorecard",
-    metric: "91%",
-    label: "Retention",
-    bars: ["w-8/12", "w-11/12", "w-7/12", "w-9/12"],
+    title: "100-Rooftop Multi-OEM Platform",
+    text: "Roll up many brands, stores, markets, and operating teams into one executive layer built for comparison, exceptions, and capital decisions.",
+  },
+];
+
+const scorecardCards = [
+  {
+    title: "Executive Visibility",
+    text: "See enterprise, store, department, and employee performance from one operating view.",
   },
   {
-    title: "Executive Group Summary",
-    metric: "12",
-    label: "Stores tracked",
-    bars: ["w-9/12", "w-10/12", "w-6/12", "w-11/12"],
+    title: "Manager Coaching",
+    text: "Turn scorecard data into practical coaching conversations.",
+  },
+  {
+    title: "Employee Empowerment",
+    text: "Give every team member clarity, ownership, recognition, and a path to improve.",
   },
 ];
 
@@ -108,8 +112,9 @@ export default function Home() {
             <p className="mt-7 max-w-4xl text-lg leading-8 text-slate-300 sm:text-xl">
               iSolve Automotive unifies sales, finance, service, parts,
               accounting, financial statements, and executive reporting into one
-              dealership performance intelligence platform powered by automation
-              and AI.
+              dealership performance intelligence platform powered by
+              automation and AI, whether you operate one rooftop or a 100-store
+              multi-OEM group.
             </p>
 
             <div className="mt-9 flex flex-wrap gap-4">
@@ -168,6 +173,65 @@ export default function Home() {
                 )}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-white/10 bg-slate-900/45">
+        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-6">
+          <div className="mb-10 max-w-4xl">
+            <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              Built for One Rooftop or One Hundred
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-slate-300">
+              iSolve scales from a single dealership that needs cleaner daily
+              visibility to a multi-OEM enterprise group managing many stores,
+              markets, brands, statements, and leadership teams.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-3">
+            {scaleCards.map((card) => (
+              <FeatureCard
+                key={card.title}
+                title={card.title}
+                description={card.text}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-6">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+          <div>
+            <div className="mb-5 inline-flex rounded-full border border-cyan-300/25 bg-cyan-300/10 px-4 py-2 text-sm font-semibold text-cyan-200">
+              Performance Scorecards
+            </div>
+            <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              Scorecards That Connect the CEO to the Team Member
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-slate-300">
+              iSolve scorecards connect enterprise leadership, dealership
+              managers, and individual employees through one shared view of
+              performance, coaching, recognition, and growth.
+            </p>
+            <Link
+              href="/scorecards"
+              className="mt-8 inline-flex rounded-md bg-cyan-400 px-7 py-4 font-bold text-slate-950 shadow-xl shadow-cyan-500/20 transition hover:bg-cyan-300"
+            >
+              Explore Scorecards
+            </Link>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-3 lg:grid-cols-1">
+            {scorecardCards.map((card) => (
+              <FeatureCard
+                key={card.title}
+                title={card.title}
+                description={card.text}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -278,65 +342,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-20 sm:px-6">
-        <div className="mb-10 max-w-4xl">
-          <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
-            Built for Real Dealership Operators
-          </h2>
-          <p className="mt-5 text-lg leading-8 text-slate-300">
-            Clean operating views for the people who run the store, coach the
-            teams, and need the truth quickly.
-          </p>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-2">
-          {mockups.map((mockup) => (
-            <div
-              key={mockup.title}
-              className="rounded-lg border border-white/10 bg-slate-900 p-5"
-            >
-              <div className="rounded-md border border-white/10 bg-slate-950 p-5">
-                <div className="mb-6 flex items-start justify-between gap-4">
-                  <div>
-                    <h3 className="text-xl font-bold">{mockup.title}</h3>
-                    <p className="mt-1 text-sm text-slate-400">
-                      Placeholder dashboard mockup
-                    </p>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-black text-cyan-300">
-                      {mockup.metric}
-                    </div>
-                    <div className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-                      {mockup.label}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="grid gap-3">
-                  {mockup.bars.map((width, index) => (
-                    <div key={`${mockup.title}-${index}`}>
-                      <div className="mb-2 flex justify-between text-xs text-slate-500">
-                        <span>Metric {index + 1}</span>
-                        <span>{[92, 74, 86, 68][index]}%</span>
-                      </div>
-                      <div className="h-3 rounded-full bg-white/10">
-                        <div
-                          className={`${width} h-3 rounded-full bg-gradient-to-r from-cyan-300 to-emerald-300`}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <ScreenshotShowcase />
 
       <CTASection
         title="Ready to See Your Dealership Clearly?"
-        description="Bring every department, every report, and every performance conversation into one dealership intelligence platform."
+        description="Bring every department, every report, and every performance conversation into one dealership intelligence platform for one rooftop, a growing group, or a 100-store organization."
         buttonText="Request Demo"
         buttonHref="mailto:jbriggs168@gmail.com?subject=iSolve Automotive Demo Request"
       />

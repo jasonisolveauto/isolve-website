@@ -1,4 +1,8 @@
-import Link from "next/link";
+import CTASection from "../components/CTASection";
+import FeatureCard from "../components/FeatureCard";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import PageHero from "../components/PageHero";
 
 type MarketingPageContent = {
   eyebrow: string;
@@ -213,121 +217,35 @@ export const routePages: Record<string, MarketingPageContent> = {
   },
 };
 
-const navLinks = [
-  { label: "Platform", href: "/platform" },
-  { label: "Departments", href: "/#departments" },
-  { label: "AI Intelligence", href: "/ai" },
-  { label: "Reporting", href: "/reporting" },
-  { label: "Contact", href: "/contact" },
-];
-
 export function MarketingRoutePage({ page }: { page: MarketingPageContent }) {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
-      <nav className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 sm:px-6">
-          <Link href="/" className="text-lg font-bold tracking-tight sm:text-xl">
-            iSolve Automotive
-          </Link>
-
-          <div className="hidden items-center gap-7 text-sm font-medium text-slate-300 lg:flex">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="transition hover:text-white"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-
-          <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-            <a
-              href="https://app.isolveauto.com"
-              className="hidden rounded-md border border-white/15 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-white/35 hover:text-white sm:inline-flex"
-            >
-              Login
-            </a>
-            <Link
-              href="/contact"
-              className="rounded-md bg-cyan-400 px-4 py-2 text-sm font-bold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-300"
-            >
-              Request Demo
-            </Link>
-          </div>
-        </div>
-      </nav>
-
-      <section className="relative overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.18),transparent_34%),linear-gradient(135deg,rgba(15,23,42,0),rgba(37,99,235,0.1))]" />
-        <div className="relative mx-auto max-w-7xl px-5 py-20 sm:px-6 sm:py-24 lg:py-28">
-          <div className="max-w-4xl">
-            <div className="mb-6 inline-flex rounded-full border border-cyan-300/25 bg-cyan-300/10 px-4 py-2 text-sm font-semibold text-cyan-200">
-              {page.eyebrow}
-            </div>
-            <h1 className="text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">
-              {page.title}
-            </h1>
-            <p className="mt-7 max-w-3xl text-lg leading-8 text-slate-300 sm:text-xl">
-              {page.description}
-            </p>
-            <div className="mt-9 flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="rounded-md bg-cyan-400 px-7 py-4 font-bold text-slate-950 shadow-xl shadow-cyan-500/20 transition hover:bg-cyan-300"
-              >
-                Request Demo
-              </Link>
-              <Link
-                href="/"
-                className="rounded-md border border-white/15 px-7 py-4 font-semibold text-slate-100 transition hover:border-white/35"
-              >
-                Back to Home
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Header />
+      <PageHero
+        eyebrow={page.eyebrow}
+        title={page.title}
+        description={page.description}
+      />
 
       <section className="mx-auto max-w-7xl px-5 py-20 sm:px-6">
         <div className="grid gap-5 md:grid-cols-3">
-          {page.features.map((feature, index) => (
-            <div
+          {page.features.map((feature) => (
+            <FeatureCard
               key={feature.title}
-              className="rounded-lg border border-white/10 bg-slate-900/80 p-7 shadow-xl shadow-black/10 transition hover:border-cyan-300/40"
-            >
-              <div className="mb-5 text-sm font-bold text-cyan-300">
-                {String(index + 1).padStart(2, "0")}
-              </div>
-              <h2 className="text-2xl font-bold">{feature.title}</h2>
-              <p className="mt-4 leading-7 text-slate-400">{feature.text}</p>
-            </div>
+              title={feature.title}
+              description={feature.text}
+            />
           ))}
         </div>
       </section>
 
-      <section className="px-5 pb-20 sm:px-6">
-        <div className="mx-auto max-w-7xl rounded-lg border border-white/10 bg-white p-8 text-slate-950 shadow-2xl shadow-black/30 sm:p-10 lg:p-12">
-          <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                Ready to unify dealership performance?
-              </h2>
-              <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-600">
-                See how iSolve Automotive can bring every department and report
-                into one clearer operating view.
-              </p>
-            </div>
-            <Link
-              href="/contact"
-              className="inline-flex justify-center rounded-md bg-slate-950 px-8 py-4 font-bold text-white transition hover:bg-slate-800"
-            >
-              Request Demo
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title="Ready to unify dealership performance?"
+        description="See how iSolve Automotive can bring every department and report into one clearer operating view."
+        buttonText="Request Demo"
+        buttonHref="/contact"
+      />
+      <Footer />
     </main>
   );
 }

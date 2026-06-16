@@ -1,4 +1,8 @@
 import Link from "next/link";
+import CTASection from "../components/CTASection";
+import FeatureCard from "../components/FeatureCard";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 const lifecycleCards = [
   "Lead Generation",
@@ -87,46 +91,7 @@ const mockups = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
-      <nav className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 sm:px-6">
-          <Link href="/" className="text-lg font-bold tracking-tight sm:text-xl">
-            iSolve Automotive
-          </Link>
-
-          <div className="hidden items-center gap-7 text-sm font-medium text-slate-300 lg:flex">
-            <Link href="/platform" className="transition hover:text-white">
-              Platform
-            </Link>
-            <a href="#departments" className="transition hover:text-white">
-              Departments
-            </a>
-            <Link href="/ai" className="transition hover:text-white">
-              AI Intelligence
-            </Link>
-            <Link href="/reporting" className="transition hover:text-white">
-              Reporting
-            </Link>
-            <Link href="/contact" className="transition hover:text-white">
-              Contact
-            </Link>
-          </div>
-
-          <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-            <a
-              href="https://app.isolveauto.com"
-              className="hidden rounded-md border border-white/15 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-white/35 hover:text-white sm:inline-flex"
-            >
-              Login
-            </a>
-            <Link
-              href="/contact"
-              className="rounded-md bg-cyan-400 px-4 py-2 text-sm font-bold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-300"
-            >
-              Request Demo
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       <section className="relative overflow-hidden border-b border-white/10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.18),transparent_34%),linear-gradient(135deg,rgba(15,23,42,0),rgba(20,184,166,0.08))]" />
@@ -148,12 +113,12 @@ export default function Home() {
             </p>
 
             <div className="mt-9 flex flex-wrap gap-4">
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="rounded-md bg-cyan-400 px-7 py-4 font-bold text-slate-950 shadow-xl shadow-cyan-500/20 transition hover:bg-cyan-300"
               >
                 Request Demo
-              </a>
+              </Link>
               <a
                 href="#platform"
                 className="rounded-md border border-white/15 px-7 py-4 font-semibold text-slate-100 transition hover:border-white/35"
@@ -248,15 +213,11 @@ export default function Home() {
 
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {departments.map((department) => (
-              <div
+              <FeatureCard
                 key={department.title}
-                className="rounded-lg border border-white/10 bg-slate-950/70 p-7 shadow-xl shadow-black/10"
-              >
-                <h3 className="text-2xl font-bold">{department.title}</h3>
-                <p className="mt-4 leading-7 text-slate-400">
-                  {department.text}
-                </p>
-              </div>
+                title={department.title}
+                description={department.text}
+              />
             ))}
           </div>
         </div>
@@ -373,33 +334,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="px-5 pb-20 sm:px-6">
-        <div className="mx-auto max-w-7xl rounded-lg border border-white/10 bg-white p-8 text-slate-950 shadow-2xl shadow-black/30 sm:p-10 lg:p-14">
-          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
-            <div>
-              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
-                Ready to See Your Dealership Clearly?
-              </h2>
-              <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-600">
-                Bring every department, every report, and every performance
-                conversation into one dealership intelligence platform.
-              </p>
-            </div>
-
-            <a
-              href="mailto:jbriggs168@gmail.com?subject=iSolve Automotive Demo Request"
-              className="inline-flex justify-center rounded-md bg-slate-950 px-8 py-4 font-bold text-white transition hover:bg-slate-800"
-            >
-              Request Demo
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <footer className="border-t border-white/10 px-5 py-8 text-center text-sm text-slate-500 sm:px-6">
-        Copyright 2026 iSolve Automotive. Dealership performance intelligence from lead
-        to net profit.
-      </footer>
+      <CTASection
+        title="Ready to See Your Dealership Clearly?"
+        description="Bring every department, every report, and every performance conversation into one dealership intelligence platform."
+        buttonText="Request Demo"
+        buttonHref="mailto:jbriggs168@gmail.com?subject=iSolve Automotive Demo Request"
+      />
+      <Footer />
     </main>
   );
 }

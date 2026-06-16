@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const lifecycleCards = [
   "Lead Generation",
   "Appointment Set",
@@ -87,26 +89,26 @@ export default function Home() {
     <main className="min-h-screen bg-slate-950 text-white">
       <nav className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 sm:px-6">
-          <a href="#" className="text-lg font-bold tracking-tight sm:text-xl">
+          <Link href="/" className="text-lg font-bold tracking-tight sm:text-xl">
             iSolve Automotive
-          </a>
+          </Link>
 
           <div className="hidden items-center gap-7 text-sm font-medium text-slate-300 lg:flex">
-            <a href="#platform" className="transition hover:text-white">
+            <Link href="/platform" className="transition hover:text-white">
               Platform
-            </a>
+            </Link>
             <a href="#departments" className="transition hover:text-white">
               Departments
             </a>
-            <a href="#ai" className="transition hover:text-white">
+            <Link href="/ai" className="transition hover:text-white">
               AI Intelligence
-            </a>
-            <a href="#reporting" className="transition hover:text-white">
+            </Link>
+            <Link href="/reporting" className="transition hover:text-white">
               Reporting
-            </a>
-            <a href="#contact" className="transition hover:text-white">
+            </Link>
+            <Link href="/contact" className="transition hover:text-white">
               Contact
-            </a>
+            </Link>
           </div>
 
           <div className="flex shrink-0 items-center gap-2 sm:gap-3">
@@ -116,12 +118,12 @@ export default function Home() {
             >
               Login
             </a>
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="rounded-md bg-cyan-400 px-4 py-2 text-sm font-bold text-slate-950 shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-300"
             >
               Request Demo
-            </a>
+            </Link>
           </div>
         </div>
       </nav>

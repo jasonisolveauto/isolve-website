@@ -27,40 +27,40 @@ const accentStyles = {
   cyan: {
     badge: "bg-cyan-300/10 text-cyan-200",
     value: "text-cyan-300",
-    bar: "bg-cyan-300",
-    chart: "from-cyan-400/80 to-blue-400/25",
+    border: "border-cyan-300/20",
+    wash: "bg-cyan-300/[0.06]",
     status: "bg-cyan-300/20 text-cyan-100",
     hover: "hover:border-cyan-300/40",
   },
   emerald: {
     badge: "bg-emerald-300/10 text-emerald-200",
     value: "text-emerald-300",
-    bar: "bg-emerald-300",
-    chart: "from-emerald-400/80 to-cyan-400/25",
+    border: "border-emerald-300/20",
+    wash: "bg-emerald-300/[0.06]",
     status: "bg-emerald-300/20 text-emerald-100",
     hover: "hover:border-emerald-300/40",
   },
   blue: {
     badge: "bg-blue-300/10 text-blue-200",
     value: "text-blue-300",
-    bar: "bg-blue-300",
-    chart: "from-blue-400/80 to-cyan-400/25",
+    border: "border-blue-300/20",
+    wash: "bg-blue-300/[0.06]",
     status: "bg-blue-300/20 text-blue-100",
     hover: "hover:border-blue-300/40",
   },
   amber: {
     badge: "bg-amber-300/10 text-amber-200",
     value: "text-amber-300",
-    bar: "bg-amber-300",
-    chart: "from-amber-400/80 to-orange-400/25",
+    border: "border-amber-300/20",
+    wash: "bg-amber-300/[0.06]",
     status: "bg-amber-300/20 text-amber-100",
     hover: "hover:border-amber-300/40",
   },
   violet: {
     badge: "bg-violet-300/10 text-violet-200",
     value: "text-violet-300",
-    bar: "bg-violet-300",
-    chart: "from-violet-400/80 to-blue-400/25",
+    border: "border-violet-300/20",
+    wash: "bg-violet-300/[0.06]",
     status: "bg-violet-300/20 text-violet-100",
     hover: "hover:border-violet-300/40",
   },
@@ -115,50 +115,69 @@ function MockWindow({
       </div>
 
       <div className="grid gap-4 p-4">
-        <div className="grid grid-cols-3 gap-3">
-          {metrics.map((metric) => (
-            <div
-              key={metric.label}
-              className="rounded-md border border-white/10 bg-white/[0.04] p-3"
-            >
-              <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
-                {metric.label}
-              </div>
-              <div className={`mt-2 text-lg font-black ${styles.value}`}>
-                {metric.value}
-              </div>
-              <div className="mt-1 text-[10px] font-semibold text-slate-400">
-                {metric.trend}
-              </div>
-            </div>
-          ))}
+        <div className={`rounded-md border ${styles.border} ${styles.wash} p-4`}>
+          <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
+            Current Focus
+          </div>
+          <div className={`mt-2 text-2xl font-black ${styles.value}`}>
+            {metrics[0]?.value}
+          </div>
+          <div className="mt-1 text-sm font-semibold text-slate-300">
+            {metrics[0]?.label} - {metrics[0]?.trend}
+          </div>
         </div>
 
         <div className="rounded-md border border-white/10 bg-white/[0.03] p-4">
-          <div className="mb-4 flex items-end gap-2">
-            {["h-12", "h-20", "h-14", "h-24", "h-16", "h-28"].map(
-              (height, index) => (
-                <div
-                  key={`${height}-${index}`}
-                  className={`${height} flex-1 rounded-t bg-gradient-to-t ${styles.chart}`}
-                />
-              ),
-            )}
+          <div className="mb-3 flex items-center justify-between gap-3">
+            <div>
+              <div className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
+                What the App Sees
+              </div>
+              <div className="mt-1 text-sm font-bold text-white">
+                Exceptions, wins, and trend signals
+              </div>
+            </div>
+            <div
+              className={`rounded-full px-2.5 py-1 text-[10px] font-bold ${styles.status}`}
+            >
+              Live
+            </div>
+          </div>
+          <div className="grid gap-2 sm:grid-cols-3">
+            {metrics.slice(0, 3).map((metric) => (
+              <div key={metric.label} className="rounded-md bg-slate-950/70 p-3">
+                <div className="truncate text-[10px] font-bold uppercase tracking-wider text-slate-500">
+                  {metric.label}
+                </div>
+                <div className={`mt-1 text-base font-black ${styles.value}`}>
+                  {metric.value}
+                </div>
+                <div className="mt-1 truncate text-[10px] font-semibold text-slate-400">
+                  {metric.trend}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="rounded-md border border-white/10 bg-white/[0.03] p-4">
+          <div className="mb-3 text-[10px] font-bold uppercase tracking-wider text-slate-500">
+            Suggested Focus
           </div>
           <div className="grid gap-2">
-            {bars.map((bar) => (
-              <div key={bar.label} className="flex items-center gap-3">
-                <div className="w-20 truncate text-[10px] font-bold uppercase tracking-wider text-slate-500">
+            {bars.slice(0, 3).map((bar) => (
+              <div
+                key={bar.label}
+                className="flex items-center justify-between gap-3 rounded-md bg-slate-950/70 p-3"
+              >
+                <span className="truncate text-xs font-semibold text-slate-300">
                   {bar.label}
-                </div>
-                <div className="h-2 flex-1 rounded-full bg-white/10">
-                  <div
-                    className={`${bar.width} h-2 rounded-full ${styles.bar}`}
-                  />
-                </div>
-                <div className="w-9 text-right text-[10px] font-semibold text-slate-400">
+                </span>
+                <span
+                  className={`rounded-full px-2 py-0.5 text-[10px] font-bold ${styles.status}`}
+                >
                   {bar.value}
-                </div>
+                </span>
               </div>
             ))}
           </div>

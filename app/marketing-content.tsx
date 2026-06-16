@@ -222,7 +222,7 @@ const aiExamples = [
   {
     question: "Why did net profit drop this month?",
     answer:
-      "Net profit is down $86K month to date. The biggest drivers are a $41K increase in service policy expense, a $28K decline in used vehicle front-end gross, and $17K higher advertising spend. Finance gross is holding steady, so the immediate coaching focus should be used car desk gross and service expense control.",
+      "Net profit is down $86K month to date. The biggest drivers are a $6K increase in service policy expense, a $28K decline in used vehicle front-end gross, and $17K higher advertising spend. Finance gross is holding steady, so the immediate coaching focus should be used car desk gross and service expense control.",
     tags: ["Net Profit", "Expense", "Used Cars"],
   },
   {

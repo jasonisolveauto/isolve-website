@@ -3,6 +3,7 @@ import CTASection from "../components/CTASection";
 import FeatureCard from "../components/FeatureCard";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import YouTubePreview from "../components/YouTubePreview";
 import ScreenshotShowcase from "./screenshot-showcase";
 
 const lifecycleCards = [
@@ -135,14 +136,9 @@ export default function Home() {
 
           <div className="w-full max-w-[420px] justify-self-end overflow-hidden rounded-lg border border-cyan-300/15 bg-slate-950/60 p-2 shadow-2xl shadow-cyan-950/20 backdrop-blur">
             <div className="relative aspect-video overflow-hidden rounded-md bg-slate-950">
-              <iframe
-                className="absolute inset-0 h-full w-full"
-                src="https://www.youtube.com/embed/BRz1LJXbEgQ"
+              <YouTubePreview
+                videoId="BRz1LJXbEgQ"
                 title="iSolve Automotive platform overview video"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                loading="lazy"
               />
             </div>
           </div>

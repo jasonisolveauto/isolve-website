@@ -177,6 +177,37 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="border-b border-white/10 bg-slate-950">
+        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-6">
+          <div className="mb-8 max-w-4xl">
+            <div className="mb-5 inline-flex rounded-full border border-cyan-300/25 bg-cyan-300/10 px-4 py-2 text-sm font-semibold text-cyan-200">
+              Platform Overview
+            </div>
+            <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              See iSolve Automotive in Action
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-slate-300">
+              Watch how iSolve brings dealership reporting, scorecards, and
+              performance visibility into one connected operating view.
+            </p>
+          </div>
+
+          <div className="overflow-hidden rounded-lg border border-white/10 bg-slate-900 shadow-2xl shadow-black/30">
+            <div className="relative aspect-video">
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src="https://www.youtube.com/embed/BRz1LJXbEgQ"
+                title="iSolve Automotive platform overview video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="border-y border-white/10 bg-slate-900/45">
         <div className="mx-auto max-w-7xl px-5 py-20 sm:px-6">
           <div className="mb-10 max-w-4xl">

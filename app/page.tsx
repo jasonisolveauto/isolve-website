@@ -133,13 +133,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-full max-w-[420px] justify-self-end overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] p-3 shadow-2xl shadow-black/30">
-            <div className="relative aspect-video overflow-hidden rounded-md border border-white/10 bg-slate-950">
+          <div className="w-full max-w-[420px] justify-self-end overflow-hidden rounded-lg border border-cyan-300/15 bg-slate-950/60 p-2 shadow-2xl shadow-cyan-950/20 backdrop-blur">
+            <div className="relative aspect-video overflow-hidden rounded-md bg-slate-950">
               <iframe
                 className="absolute inset-0 h-full w-full"
                 src="https://www.youtube.com/embed/BRz1LJXbEgQ"
                 title="iSolve Automotive platform overview video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
                 loading="lazy"

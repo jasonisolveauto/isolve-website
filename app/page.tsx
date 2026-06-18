@@ -133,67 +133,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-lg border border-white/10 bg-white/[0.04] p-4 shadow-2xl shadow-black/30">
-            <div className="rounded-md border border-white/10 bg-slate-950 p-5">
-              <div className="mb-5 flex items-center justify-between">
-                <div>
-                  <div className="text-sm font-semibold text-slate-400">
-                    Group Performance
-                  </div>
-                  <div className="text-2xl font-bold">$1.8M Net Profit</div>
-                </div>
-                <div className="rounded-full bg-emerald-400/10 px-3 py-1 text-sm font-bold text-emerald-300">
-                  +14.2%
-                </div>
-              </div>
-              <div className="space-y-3">
-                {["Sales", "Finance", "Service", "Parts", "Accounting"].map(
-                  (label, index) => (
-                    <div key={label}>
-                      <div className="mb-1 flex justify-between text-xs text-slate-400">
-                        <span>{label}</span>
-                        <span>{[92, 81, 87, 74, 89][index]}%</span>
-                      </div>
-                      <div className="h-2 rounded-full bg-white/10">
-                        <div
-                          className={[
-                            "h-2 rounded-full bg-cyan-300",
-                            [
-                              "w-11/12",
-                              "w-10/12",
-                              "w-10/12",
-                              "w-8/12",
-                              "w-11/12",
-                            ][index],
-                          ].join(" ")}
-                        />
-                      </div>
-                    </div>
-                  ),
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="border-b border-white/10 bg-slate-950">
-        <div className="mx-auto max-w-7xl px-5 py-20 sm:px-6">
-          <div className="mb-8 max-w-4xl">
-            <div className="mb-5 inline-flex rounded-full border border-cyan-300/25 bg-cyan-300/10 px-4 py-2 text-sm font-semibold text-cyan-200">
-              Platform Overview
-            </div>
-            <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              See iSolve Automotive in Action
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-slate-300">
-              Watch how iSolve brings dealership reporting, scorecards, and
-              performance visibility into one connected operating view.
-            </p>
-          </div>
-
-          <div className="overflow-hidden rounded-lg border border-white/10 bg-slate-900 shadow-2xl shadow-black/30">
-            <div className="relative aspect-video">
+          <div className="w-full max-w-[420px] justify-self-end overflow-hidden rounded-lg border border-white/10 bg-white/[0.04] p-3 shadow-2xl shadow-black/30">
+            <div className="relative aspect-video overflow-hidden rounded-md border border-white/10 bg-slate-950">
               <iframe
                 className="absolute inset-0 h-full w-full"
                 src="https://www.youtube.com/embed/BRz1LJXbEgQ"

@@ -224,12 +224,13 @@ const sections = [
       <>
         <p>
           AI and translation features are currently disabled for customer use
-          and remain in testing. Testing uses both real customer or vehicle
-          records and made-up sample data.
+          and remain in testing. Testing uses real vehicle information,
+          including VINs, mileage, and repair-order data, as well as made-up
+          sample data. Customer names are not used in this testing.
         </p>
         <p className="review-note">
-          [BEFORE PUBLICATION, DESCRIBE THE ACTUAL RECORD TYPES USED IN TESTING,
-          ANY INFORMATION SENT TO EXTERNAL PROVIDERS, THE PURPOSES, AND THE
+          [BEFORE PUBLICATION, CONFIRM WHICH OF THESE DATA FIELDS ARE SENT TO
+          EXTERNAL PROVIDERS, THE PURPOSES, AND THE
           APPLICABLE PROVIDER RETENTION AND MODEL-TRAINING PRACTICES. THIS REVIEW
           APPLIES TO CURRENT TESTING AS WELL AS ANY FUTURE CUSTOMER RELEASE.]
         </p>

@@ -107,10 +107,11 @@ const sections = [
           customer-service decisions.
         </p>
         <p>
-          If an AI or translation feature is enabled under your service
-          arrangement, its output requires appropriate human review. It does not
-          independently authorize a repair, submit a warranty claim, or replace
-          professional judgment.
+          AI and translation features are currently disabled for customer use
+          and remain in testing. If made available in the future, their outputs
+          will require appropriate human review and will not independently
+          authorize a repair, submit a warranty claim, or replace professional
+          judgment.
         </p>
       </>
     ),

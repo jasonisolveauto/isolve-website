@@ -142,11 +142,9 @@ const sections = [
           restrictions that apply to that information. Such a transaction does
           not expand SMS consent to new senders or purposes.
         </p>
-        <p className="review-note">
-          [CONFIRM WHETHER ANY PERSONAL INFORMATION IS SOLD, USED FOR TARGETED
-          ADVERTISING, OR DISCLOSED FOR THIRD-PARTY MARKETING. INSERT AN
-          ACCURATE GENERAL STATEMENT HERE. THE SMS RESTRICTION BELOW APPLIES
-          SEPARATELY.]
+        <p>
+          We do not sell customer information or share it with third parties for
+          advertising.
         </p>
       </>
     ),
@@ -201,12 +199,13 @@ const sections = [
           information, and video interactions, under its own privacy policy.
         </p>
         <p className="review-note">
-          [PUBLIC WEBSITE REVIEW: No standalone analytics or advertising tracker
-          was found in the reviewed website source and the nine first-party
-          JavaScript bundles referenced by the live homepage. The YouTube player
-          is an external service. Before publication, finish the platform cookie
-          and analytics review and confirm whether hosting configuration adds
-          any tracking outside the repository.]
+          [ANALYTICS REVIEW: No standalone analytics or advertising tracker was
+          found in the reviewed marketing website source and nine first-party
+          homepage bundles. The website embeds YouTube. Separately, the platform
+          root layout includes Vercel Web Analytics when NODE_ENV is production.
+          Confirm that this source matches the live deployment, then finalize
+          the analytics disclosure and review platform cookies and any
+          hosting-injected tracking.]
         </p>
         <p className="review-note">
           <strong>Browser privacy signals:</strong> [No custom Do Not Track or
@@ -223,13 +222,12 @@ const sections = [
     title: "AI and translation features",
     content: (
       <>
-        <p className="review-note">
-          [BEFORE PUBLICATION, CONFIRM WHETHER AI OR EXTERNAL TRANSLATION IS
-          ENABLED FOR ANY FEATURE COVERED BY THIS POLICY. IF ENABLED, DESCRIBE
-          THE INFORMATION SENT, THE PURPOSE, THE PROVIDERS OR PROVIDER
-          CATEGORIES, AND RELEVANT RETENTION AND TRAINING PRACTICES. IF
-          DISABLED, REMOVE THIS SECTION OR STATE ITS LIMITED, VERIFIED STATUS.
-          DO NOT PRESENT PLANNED CAPABILITIES AS ACTIVE PROCESSING.]
+        <p>
+          AI and translation features are currently disabled for customer use
+          and remain in testing. Before making these features available to
+          customers, we will update this policy to describe the information
+          processed, purposes, providers, and relevant retention and training
+          practices.
         </p>
       </>
     ),
@@ -246,6 +244,8 @@ const sections = [
           Relevant factors include the type of record, the customer agreement,
           the length of the service relationship, and legal requirements.
           Deletion from active systems may precede expiration of backup copies.
+          Deactivating an account or removing store access does not by itself
+          delete historical reporting or audit attribution.
         </p>
         <p>
           Consent and suppression records may be retained as needed to

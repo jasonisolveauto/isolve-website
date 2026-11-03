@@ -44,15 +44,29 @@ Additional sources for the exact DeepL plan: [API Developer terms](https://www.d
 
 Provider deletion does not delete iSolve originals, English outputs, uploads, exports, local test copies, audit evidence, or backups. The existing application preserves historical identity/reporting attribution when access is deactivated. No universal automatic purge schedule has been verified.
 
-Approved policy decision, implementation pending: delete disposable real-data testing copies and temporary AI outputs within 30 days after the relevant testing finishes. Jason explicitly accepted this rule. Original repair records, saved warranty stories and required audit history follow a separate retention schedule; they are not disposable testing copies. The approval does not authorize bulk deletion of existing immutable B2 evidence or staging records.
+## Approved pilot retention schedule
 
-Before enforcement or publication as an operating practice, identify covered copies and temporary outputs, record each test's completion date, assign a cleanup owner, and verify deletion and backup handling. Define any required preservation exceptions explicitly. No cleanup job or manual deletion was performed by this website change. Backup expiry and the separate authoritative-record schedule remain unresolved.
+Jason approved these periods on November 2, 2026 (Pacific time). These are pilot policy decisions, not claims that every period is legally mandated or already configured.
+
+| Record category | Approved period |
+| --- | --- |
+| Complete repair records, including estimates, approvals, invoices and relevant messages/attachments | 7 years after final RO closure |
+| Saved warranty stories, originals, translations, revisions and approvals | Same period as the associated RO |
+| Related repair/warranty audit history | Same period as the associated record |
+| Routine security and technical logs | 12 months; retain relevant incident evidence longer when necessary |
+| Disaster-recovery backups | 35-day rolling window, pending configuration verification |
+| Disposable real-data testing copies and temporary AI outputs | Delete within 30 days after the relevant testing finishes |
+
+Legal holds and longer applicable legal or contractual requirements override routine deletion. Original records and required audit evidence are not disposable testing copies. The approval does not authorize bulk deletion of existing immutable B2 evidence or staging records. A backup window is not a substitute for retaining primary records for their full required period.
+
+Legal basis and limits: [California BAR](https://www.bar.ca.gov/wir) specifies a minimum of three years for repair invoices, estimates, work orders and authorization records. The seven-year schedule is a business-policy choice for repair history, warranty support, disputes and audits, not a universal legal minimum. Manufacturer and fleet contract requirements may differ. [FAR 4.703](https://www.acquisition.gov/far/4.703) can measure applicable federal-contract retention from final payment, subject to record-specific periods and contract clauses. For information covered by the [FTC Safeguards Rule](https://www.ftc.gov/business-guidance/resources/ftc-safeguards-rule-what-your-business-needs-know), the two-year disposal provision and its business-need, legal and feasibility exceptions must be considered; do not apply seven years indiscriminately to every customer-data category.
+
+Pilot implementation follow-up: identify the covered records and retention start dates, assign a cleanup owner, honor preservation exceptions, and verify deletion and backup handling. No cleanup job, backup configuration or manual deletion was performed by this website change. Keep implementation proportionate to the pilot; do not describe an unverified schedule as enforced.
 
 ## Remaining publication questions
 
 - Runtime account mapping and any Azure uploads outside the reviewed dictionary, if relevant to the disclosed workflows.
-- Implementation of the approved 30-day testing-copy rule, backup expiry, and privacy-request handling.
-- Separate retention schedules for authoritative records, saved warranty stories and audit history.
+- Implementation of the approved pilot schedule, backup expiry, and privacy-request handling.
 
 Complete these in the privacy draft before removing its review notice. No runtime configuration or data deletion is part of this website PR.
 

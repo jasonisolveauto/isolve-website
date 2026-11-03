@@ -296,12 +296,16 @@ const sections = [
           completely secure.
         </p>
         <p className="review-note">
-          [APPROVED POLICY — IMPLEMENTATION PENDING: Delete disposable real-data
-          testing copies and temporary AI outputs within 30 days after the
-          relevant testing finishes. Original repair records, saved warranty
-          stories, and required audit history follow a separate retention
-          schedule. Establish the cleanup process and backup handling before
-          presenting this deadline as an operating practice.]
+          [APPROVED PILOT SCHEDULE — IMPLEMENTATION PENDING: Retain complete
+          repair records for 7 years after final RO closure. Keep saved warranty
+          stories and related repair/warranty audit history for the same period.
+          Retain routine security and technical logs for 12 months, with relevant
+          incident evidence retained longer when necessary. Use a 35-day rolling
+          disaster-recovery backup window. Delete disposable real-data testing
+          copies and temporary AI outputs within 30 days after testing finishes.
+          Legal holds and longer applicable legal or contractual requirements
+          override routine deletion. Verify cleanup and backup configuration
+          before presenting these periods as operating practice.]
         </p>
         <p className="review-note">
           [VERIFY THESE RETENTION, DELETION, BACKUP, ACCESS-CONTROL, AND

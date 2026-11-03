@@ -228,11 +228,35 @@ const sections = [
           including VINs, mileage, and repair-order data, as well as made-up
           sample data. Customer names are not used in this testing.
         </p>
+        <p>
+          Testing workflows are configured to send selected repair-narrative text
+          to Microsoft Azure Translator for translation and to the OpenAI API
+          for translation or meaning review. Identifiers included in that text
+          may be transmitted.
+        </p>
+        <p>
+          <a href="https://developers.openai.com/api/docs/guides/your-data">OpenAI’s published API policy</a>{" "}
+          excludes model training by default unless an account opts in, but
+          allows abuse-monitoring retention, generally up to 30 days with legal
+          or safety exceptions.
+        </p>
+        <p>
+          <a href="https://www.microsoft.com/en-us/translator/business/notrace">Microsoft’s text-translation policy</a>{" "}
+          provides for no persistent storage or training on translation
+          requests; separately uploaded Custom Translator training material is
+          retained until deleted or account expiry.
+        </p>
+        <p>
+          DeepL is also configured for evaluation, with retention and training
+          terms dependent on the API plan and features used. See{" "}
+          <a href="https://www.deepl.com/en/privacy">DeepL’s privacy policy</a>.
+          These provider policies do not determine how long iSolve retains its
+          own source records, outputs or audit evidence.
+        </p>
         <p className="review-note">
-          [BEFORE PUBLICATION, CONFIRM WHICH OF THESE DATA FIELDS ARE SENT TO
-          EXTERNAL PROVIDERS, THE PURPOSES, AND THE
-          APPLICABLE PROVIDER RETENTION AND MODEL-TRAINING PRACTICES. THIS REVIEW
-          APPLIES TO CURRENT TESTING AS WELL AS ANY FUTURE CUSTOMER RELEASE.]
+          [ACCOUNT REVIEW REMAINS: VERIFY OPENAI SHARING AND RETENTION SETTINGS,
+          DEEPL API PLAN AND REAL-DATA USE, AND CURRENT AZURE CUSTOM TRANSLATOR
+          UPLOADS. DO NOT ASSERT UNIVERSAL ZERO RETENTION OR NO TRAINING.]
         </p>
       </>
     ),

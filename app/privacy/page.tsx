@@ -224,10 +224,14 @@ const sections = [
       <>
         <p>
           AI and translation features are currently disabled for customer use
-          and remain in testing. Before making these features available to
-          customers, we will update this policy to describe the information
-          processed, purposes, providers, and relevant retention and training
-          practices.
+          and remain in testing. Testing uses both real customer or vehicle
+          records and made-up sample data.
+        </p>
+        <p className="review-note">
+          [BEFORE PUBLICATION, DESCRIBE THE ACTUAL RECORD TYPES USED IN TESTING,
+          ANY INFORMATION SENT TO EXTERNAL PROVIDERS, THE PURPOSES, AND THE
+          APPLICABLE PROVIDER RETENTION AND MODEL-TRAINING PRACTICES. THIS REVIEW
+          APPLIES TO CURRENT TESTING AS WELL AS ANY FUTURE CUSTOMER RELEASE.]
         </p>
       </>
     ),

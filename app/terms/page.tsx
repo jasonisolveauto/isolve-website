@@ -122,9 +122,12 @@ const sections = [
     content: (
       <>
         <p>
-          The vehicle-service SMS program supports communications between the
-          identified dealership and customers, fleet representatives, or other
-          authorized service contacts. iSolve provides the messaging technology.
+          Participating dealerships use iSolve to operate their own
+          vehicle-service SMS programs for customers, fleet representatives,
+          and other authorized service contacts. The dealership named in your
+          enrollment notice is your sender; iSolve provides the messaging
+          technology. These shared terms apply alongside the sender-specific
+          program details provided at enrollment.
         </p>
         <p>
           Messages may include repair order updates, estimates, requests for

@@ -17,7 +17,8 @@ const sections = [
       <>
         <p>
           We manage information collected for our own website, business
-          inquiries, account administration, and support. When a dealership or
+          inquiries, account administration, and support. Our platform serves
+          participating dealerships and fleet organizations. When a dealership or
           fleet organization uses our platform to manage its records, we process
           that information on its behalf under our agreement with that
           organization.

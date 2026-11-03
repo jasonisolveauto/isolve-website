@@ -12,11 +12,14 @@ Status: review draft. Proposed paper-consent workflow; not implemented, publishe
 | Dealership privacy notice | [HONOR PRIVACY POLICY URL] |
 | Platform provider | iSolve Automotive LLC |
 | Platform privacy notice | https://www.isolveauto.com/privacy — proposed; verify published final page |
-| Shared SMS terms | https://www.isolveauto.com/terms — proposed; verify published final page |
+| Honor SMS terms | [HONOR SMS TERMS URL ON HONOR BUSINESS DOMAIN] |
+| Supplemental platform terms | https://www.isolveauto.com/terms — proposed; verify published final page |
 | Program | Honor GMC Vehicle Service Updates |
 | Campaign use case | Customer Care |
 
 Use the dealership's legal business information for its brand registration. Enter its EIN directly in Twilio; do not add it to this repository or the public form. iSolve's approved profile is the software-provider profile, not evidence of Honor's brand approval.
+
+For the campaign privacy and terms URL fields, use Honor-specific policies covering this program; host the SMS terms on Honor's business domain. Generic iSolve pages are supplemental platform disclosures, not replacements for Honor's campaign policies. Confirm the campaign is associated with Honor's appropriate registered brand rather than the iSolve brand shown in the earlier onboarding screenshot.
 
 ## Customer-facing paper form
 
@@ -40,7 +43,7 @@ Support: [HONOR SERVICE PHONE OR EMAIL]. Platform support: jason@isolveauto.com.
 
 Privacy: [HONOR PRIVACY POLICY URL] and https://www.isolveauto.com/privacy
 
-SMS terms: https://www.isolveauto.com/terms and the program details below.
+SMS terms: [HONOR SMS TERMS URL ON HONOR BUSINESS DOMAIN] and the program details below. Supplemental platform terms: https://www.isolveauto.com/terms.
 
 Form version: Honor SMS pilot v1. Provide the completed final form and program details to the recipient.
 
@@ -67,7 +70,7 @@ Draft for use after confirming the legal entity and sender details:
 
 Select **Paper Form** only if the process below is actually adopted. Do not claim a web-form, verbal, or keyword enrollment process that is not in use.
 
-> Before receiving recurring service texts, each recipient is given Honor GMC's optional SMS consent form and program details. The recipient checks the consent box, provides their mobile number, and signs and dates the form. The form identifies Honor GMC as the sender and describes the service-message purpose, variable frequency, possible message/data charges, STOP and HELP instructions, optional participation, support contact, and applicable privacy and SMS terms links. Honor retains the signed form and its version with the consent record. SMS consent is not required to receive vehicle service. Privacy notices: [HONOR PRIVACY POLICY URL] and https://www.isolveauto.com/privacy. SMS terms: https://www.isolveauto.com/terms. A blank copy of the actual final form and Honor program details is available at [PUBLIC FORM EVIDENCE URL].
+> Before receiving recurring service texts, each recipient is given Honor GMC's optional SMS consent form and program details. The recipient checks the consent box, provides their mobile number, and signs and dates the form. The form identifies Honor GMC as the sender and describes the service-message purpose, variable frequency, possible message/data charges, STOP and HELP instructions, optional participation, support contact, and applicable privacy and SMS terms links. Honor retains the signed form and its version with the consent record. SMS consent is not required to receive vehicle service. Privacy notices: [HONOR PRIVACY POLICY URL] and https://www.isolveauto.com/privacy. SMS terms: [HONOR SMS TERMS URL ON HONOR BUSINESS DOMAIN]. A blank copy of the actual final form and Honor program details is available at [PUBLIC FORM EVIDENCE URL].
 
 Provide reviewers a publicly accessible blank final form or screenshot of it; never upload a signed customer form as public opt-in evidence. The evidence URL must work without login. Do not submit draft policy URLs or placeholders.
 

@@ -266,12 +266,6 @@ const sections = [
           error-free. Nothing in these Terms excludes a responsibility or right
           that cannot lawfully be excluded.
         </p>
-        <p className="review-note">
-          [BEFORE PUBLICATION, DECIDE WHETHER A SEPARATE COMMERCIAL AGREEMENT
-          WILL ADDRESS LIABILITY LIMITS, INDEMNITY, GOVERNING LAW, AND DISPUTE
-          RESOLUTION. THIS DRAFT DOES NOT CREATE AN ARBITRATION REQUIREMENT,
-          CLASS-ACTION WAIVER, OR FIXED LIABILITY CAP.]
-        </p>
       </>
     ),
   },

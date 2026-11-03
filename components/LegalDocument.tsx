@@ -48,9 +48,9 @@ export default function LegalDocument({
             >
               <p className="font-bold">Draft for review — not yet effective</p>
               <p className="mt-1">
-                This draft contains items that still need confirmation. It is
-                not the published policy and should not be submitted for
-                messaging registration.
+                This version is prepared for publication and is awaiting
+                approval. It is not yet the published policy and should not
+                be submitted for messaging registration.
               </p>
             </aside>
             <nav

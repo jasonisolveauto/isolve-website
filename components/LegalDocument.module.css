@@ -51,11 +51,3 @@
 .document a:hover {
   color: #fff;
 }
-
-.document :global(.review-note) {
-  padding: 1rem;
-  border-left: 3px solid #fcd34d;
-  background: rgb(252 211 77 / 8%);
-  color: #fef3c7;
-  font-size: 0.875rem;
-}

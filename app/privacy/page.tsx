@@ -109,10 +109,6 @@ const sections = [
           you request or use. Vehicle-service SMS consent does not authorize
           unrelated promotional messages.
         </p>
-        <p className="review-note">
-          [CONFIRM ANY ADDITIONAL USE FOR ANALYTICS, PRODUCT IMPROVEMENT, OR
-          MARKETING AND DESCRIBE IT ACCURATELY BEFORE PUBLICATION.]
-        </p>
       </>
     ),
   },
@@ -193,27 +189,24 @@ const sections = [
           affect functionality.
         </p>
         <p>
+          The platform is configured to use Vercel Web Analytics to understand
+          page usage and improve the service. Analytics may include pages
+          visited, referral information, and browser or device characteristics.
+        </p>
+        <p>
           The public website embeds a YouTube video using youtube-nocookie.com.
           The player loads automatically and begins muted playback, which
           connects your browser to YouTube even before you click Play. YouTube
           may receive technical information, including your IP address, browser
           information, and video interactions, under its own privacy policy.
+          Third-party content providers may collect information about your
+          activity over time and across other websites and services.
         </p>
-        <p className="review-note">
-          [ANALYTICS REVIEW: No standalone analytics or advertising tracker was
-          found in the reviewed marketing website source and nine first-party
-          homepage bundles. The website embeds YouTube. Separately, the platform
-          root layout includes Vercel Web Analytics when NODE_ENV is production.
-          Confirm that this source matches the live deployment, then finalize
-          the analytics disclosure and review platform cookies and any
-          hosting-injected tracking.]
-        </p>
-        <p className="review-note">
-          <strong>Browser privacy signals:</strong> [No custom Do Not Track or
-          Global Privacy Control handling was identified in the reviewed public
-          website code. Confirm deployed behavior, third-party video behavior,
-          and the platform’s response before inserting a final disclosure. Do
-          not treat the two signals as interchangeable.]
+        <p>
+          <strong>Do Not Track:</strong> Our public website does not change its
+          behavior in response to browser Do Not Track signals. Third-party
+          content providers apply their own privacy settings and policies.
+          You can contact us about privacy choices using the details below.
         </p>
       </>
     ),
@@ -236,37 +229,15 @@ const sections = [
           may be transmitted.
         </p>
         <p>
-          <a href="https://developers.openai.com/api/docs/guides/your-data">OpenAI’s published API policy</a>{" "}
-          excludes model training by default unless an account opts in, but
-          allows abuse-monitoring retention, generally up to 30 days with legal
-          or safety exceptions.
-          The reviewed iSolve organization settings show feedback,
-          evaluation/fine-tuning, and input/output sharing disabled. API call
-          logging was disabled and saved during this review. These settings do
-          not establish Zero Data Retention.
+          OpenAI and Microsoft process submitted text under their applicable
+          service terms and data-handling policies. Provider retention depends
+          on the service and account configuration. Our use of these services
+          does not imply that all submitted data is immediately deleted.
         </p>
         <p>
-          <a href="https://www.microsoft.com/en-us/translator/business/notrace">Microsoft’s text-translation policy</a>{" "}
-          provides for no persistent storage or training on translation
-          requests; separately uploaded Custom Translator training material is
-          retained until deleted or account expiry.
-          The reviewed Custom Translator sentence dictionary contains five
-          generic English/Spanish pairs without vehicle or customer identifiers.
-        </p>
-        <p>
-          DeepL API Developer is configured for evaluation. Only made-up test
-          examples have been submitted to DeepL; no real vehicle or repair-order
-          data has been used there. Its{" "}
-          <a href="https://www.deepl.com/en/pro-license">terms</a>{" "}
-          allow indefinite retention of submitted content and prohibit
-          processing personal data through that plan.
-          These provider policies do not determine how long iSolve retains its
-          own source records, outputs or audit evidence.
-        </p>
-        <p className="review-note">
-          [REVIEW SCOPE: Azure evidence covers the displayed sentence dictionary,
-          not every workspace or model. Confirm runtime credentials use the
-          reviewed accounts. Do not assert universal zero retention or no training.]
+          DeepL is evaluated using made-up examples only; no real vehicle or
+          repair-order data has been submitted to DeepL. Provider retention is
+          separate from our retention of source records and saved outputs.
         </p>
       </>
     ),
@@ -295,22 +266,6 @@ const sections = [
           We use administrative, technical, and organizational measures designed
           to protect information. No transmission or storage system is
           completely secure.
-        </p>
-        <p className="review-note">
-          [APPROVED PILOT SCHEDULE — IMPLEMENTATION PENDING: Retain complete
-          repair records for 7 years after final RO closure. Keep saved warranty
-          stories and related repair/warranty audit history for the same period.
-          Retain routine security and technical logs for 12 months, with relevant
-          incident evidence retained longer when necessary. Use a 35-day rolling
-          disaster-recovery backup window. Delete disposable real-data testing
-          copies and temporary AI outputs within 30 days after testing finishes.
-          Legal holds and longer applicable legal or contractual requirements
-          override routine deletion. Verify cleanup and backup configuration
-          before presenting these periods as operating practice.]
-        </p>
-        <p className="review-note">
-          [VERIFY THESE RETENTION, DELETION, BACKUP, ACCESS-CONTROL, AND
-          SECURITY STATEMENTS AGAINST ACTUAL PRACTICES.]
         </p>
       </>
     ),
@@ -341,8 +296,8 @@ const sections = [
     ),
   },
   {
-    id: "children-and-processing-locations",
-    title: "Children and processing locations",
+    id: "children",
+    title: "Children",
     content: (
       <>
         <p>
@@ -350,12 +305,6 @@ const sections = [
           contacts, not children under 13. We do not knowingly collect personal
           information from children under 13. Contact us if you believe a child
           has submitted information.
-        </p>
-        <p className="review-note">
-          [CONFIRM THE COUNTRIES IN WHICH ISOLVE AND ITS PROVIDERS STORE OR
-          ACCESS PERSONAL INFORMATION, THEN ADD AN ACCURATE PROCESSING-LOCATIONS
-          STATEMENT. ASSESS ADDITIONAL NOTICES IF SERVING USERS OUTSIDE THE
-          UNITED STATES.]
         </p>
       </>
     ),

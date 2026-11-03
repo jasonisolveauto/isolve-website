@@ -1,8 +1,8 @@
 # Privacy and terms publication review
 
-Status: draft review branch only. Do not merge or submit these URLs to Twilio until the content and messaging behavior are verified.
+Status: iSolve publication candidate on the review branch. Not published or submitted to Twilio. Dealer-specific enrollment and registration are separate from this website release.
 
-The `/privacy` and `/terms` routes retain every unresolved item from the policy draft. Both have a visible draft notice and `noindex, nofollow` metadata. This is a search-engine request, not access control; preview URLs and repository files may be public.
+The `/privacy` and `/terms` routes contain generic iSolve policy copy, without dealer names or bracketed implementation notes. Both retain a prepublication notice and `noindex, nofollow` metadata until release approval. This is a search-engine request, not access control; preview URLs and repository files may be public.
 
 This section is for Jason and the implementation team. Do not publish it as part of the policies.
 
@@ -54,9 +54,38 @@ Confirm that the published pages are accessible without login, display correctly
 
 ## Release steps
 
-1. Resolve all bracketed review items in both page files against actual website and platform practices, and set the effective date in `components/LegalDocument.tsx`.
-2. Remove the review notice, review-note styling/markup, draft metadata wording, and `robots` overrides only when the policies are final. Keep substantive disclosures intact.
+1. Approve the publication candidate and set the actual publication date in `components/LegalDocument.tsx`. Internal follow-ups below must not be mistaken for verified operating controls.
+2. Remove the prepublication notice, draft metadata wording, and `robots` overrides as part of the approved release. Keep substantive disclosures intact.
 3. Review the dealership sender and consent implementation separately. These static website pages do not implement enrollment, STOP/HELP, or Twilio registration.
 4. Run `npm run build` and `npm run lint`; check both pages and footer links on mobile and desktop.
 5. Merge and deploy through the existing Vercel project only after content approval. Verify the live `/privacy` and `/terms` URLs without login before entering them in Twilio.
 
+
+## Public-copy decisions
+
+- Public policy pages use participating-dealership language; Honor appears only in internal pilot documentation.
+- Retention uses purpose-based criteria. The approved seven-year / 12-month / 35-day / 30-day schedule remains in the internal retention review until implementation is verified; no automated deletion or backup-expiry claim is made publicly.
+- The analytics disclosure describes the platform configuration identified in source, without claiming a live browser audit. The public website's known YouTube behavior and lack of custom Do Not Track handling are disclosed. Do not equate Do Not Track with Global Privacy Control or claim verified GPC behavior.
+- AI disclosure retains the testing scope and providers, without publishing account screenshots, audit conclusions, universal no-training claims, or a zero-retention promise.
+- No processing-country list is asserted without verification. No arbitration, class-action waiver, fixed liability cap, indemnity, or governing-law clause is introduced for this pilot; those are optional commercial-contract work, not a website placeholder.
+- The policy makes no claim of universal legal compliance or guaranteed Twilio approval. Future features and material data-practice changes require updating the notice.
+
+## Preserved internal review notes
+
+The following were removed from public-facing copy, not resolved by deletion. They remain implementation follow-ups alongside the confirmed facts above.
+
+[CONFIRM ANY ADDITIONAL USE FOR ANALYTICS, PRODUCT IMPROVEMENT, OR MARKETING AND DESCRIBE IT ACCURATELY BEFORE PUBLICATION.]
+
+[ANALYTICS REVIEW: No standalone analytics or advertising tracker was found in the reviewed marketing website source and nine first-party homepage bundles. The website embeds YouTube. Separately, the platform root layout includes Vercel Web Analytics when NODE_ENV is production. Confirm that this source matches the live deployment, then finalize the analytics disclosure and review platform cookies and any hosting-injected tracking.]
+
+<strong>Browser privacy signals:</strong> [No custom Do Not Track or Global Privacy Control handling was identified in the reviewed public website code. Confirm deployed behavior, third-party video behavior, and the platform’s response before inserting a final disclosure. Do not treat the two signals as interchangeable.]
+
+[REVIEW SCOPE: Azure evidence covers the displayed sentence dictionary, not every workspace or model. Confirm runtime credentials use the reviewed accounts. Do not assert universal zero retention or no training.]
+
+[APPROVED PILOT SCHEDULE — IMPLEMENTATION PENDING: Retain complete repair records for 7 years after final RO closure. Keep saved warranty stories and related repair/warranty audit history for the same period. Retain routine security and technical logs for 12 months, with relevant incident evidence retained longer when necessary. Use a 35-day rolling disaster-recovery backup window. Delete disposable real-data testing copies and temporary AI outputs within 30 days after testing finishes. Legal holds and longer applicable legal or contractual requirements override routine deletion. Verify cleanup and backup configuration before presenting these periods as operating practice.]
+
+[VERIFY THESE RETENTION, DELETION, BACKUP, ACCESS-CONTROL, AND SECURITY STATEMENTS AGAINST ACTUAL PRACTICES.]
+
+[CONFIRM THE COUNTRIES IN WHICH ISOLVE AND ITS PROVIDERS STORE OR ACCESS PERSONAL INFORMATION, THEN ADD AN ACCURATE PROCESSING-LOCATIONS STATEMENT. ASSESS ADDITIONAL NOTICES IF SERVING USERS OUTSIDE THE UNITED STATES.]
+
+[BEFORE PUBLICATION, DECIDE WHETHER A SEPARATE COMMERCIAL AGREEMENT WILL ADDRESS LIABILITY LIMITS, INDEMNITY, GOVERNING LAW, AND DISPUTE RESOLUTION. THIS DRAFT DOES NOT CREATE AN ARBITRATION REQUIREMENT, CLASS-ACTION WAIVER, OR FIXED LIABILITY CAP.]

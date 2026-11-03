@@ -1,6 +1,6 @@
 # AI and translation retention review
 
-Status: evidence review for the unpublished privacy-policy draft. No provider settings, AI flags, data, or production deployments were changed.
+Status: evidence review for the unpublished privacy-policy draft. Jason approved the temporary-testing retention rule during this review. Implementation is pending. Jason disabled OpenAI API call logging and supplied a successful-save screenshot; this website change does not modify provider settings, AI flags, data, or production deployments.
 
 ## Confirmed scope
 
@@ -21,22 +21,22 @@ Reviewed iSolve-Platform branch `vero/b2-platform-ai-language` at `ec69721851a0a
 
 ## Provider policies checked November 3, 2026
 
-| Service | Content retention and training policy | Account evidence still needed |
+| Service | Content retention and training policy | Account evidence and limits |
 | --- | --- | --- |
-| OpenAI API | No model training by default unless opted in. Abuse-monitoring content is normally retained up to 30 days, with legal/safety exceptions. Zero Data Retention requires eligibility and configuration; it is not established here. | Organization/project sharing controls, any retention agreement, and applicable project. |
+| OpenAI API | No model training by default unless opted in. Abuse-monitoring content is normally retained up to 30 days, with legal/safety exceptions. Zero Data Retention requires eligibility and configuration; it is not established here. | Screenshots show all three sharing options disabled in the iSolve Automotive organization. API call logging changed from Enabled per call to Disabled with a success banner. Audit logging was left unchanged. Runtime credential-to-organization mapping has not been verified. |
 | Azure Translator text API | Translation request content is not persistently stored or used for training. | Confirm the actual service and request path used. |
-| Azure Custom Translator | Uploaded training documents are retained until deleted or account expiry and used for the customer's custom system. | Current workspace documents/models and whether real records were uploaded. |
-| DeepL API Pro | Text is processed temporarily and deleted after the service, with exceptions for requested saved/customization content; it is not used to improve the service. API Free must be assessed separately. | Exact API plan, applicable contract and any saved/customization features. |
+| Azure Custom Translator | Uploaded training documents are retained until deleted or account expiry and used for the customer's custom system. | iSolve Automotive B2 project screenshots show one sentence dictionary, iSolve Automotive Sentences v1, created October 18, 2026. All five English/Spanish pairs were reviewed and contain generic repair phrases without identifiers. This does not inventory every workspace or verify model publication. |
+| DeepL API Developer | Terms section 3.3.2 permits perpetual retention of content and processed content; section 8.3.11 prohibits personal-data processing. Do not apply paid-plan deletion assurances to this plan. | Account screenshot confirms active API Developer, free subscription. Jason confirms no real data has been submitted, only made-up test examples. |
 
 Sources: [OpenAI data controls](https://developers.openai.com/api/docs/guides/your-data), [OpenAI sharing controls](https://help.openai.com/en/articles/10306912-sharing-feedback-evaluation-and-fine-tuning-data-and-api-inputs-and-outputs-with-openai), [Microsoft no-trace and customization policy](https://www.microsoft.com/en-us/translator/business/notrace), [DeepL privacy policy, sections 3, 4, 6.5 and 13](https://www.deepl.com/en/privacy).
 
-These are provider policy statements, not verification of iSolve account settings. No claim of universal zero retention or universal no-training is established.
+Additional sources for the exact DeepL plan: [API Developer terms](https://www.deepl.com/en/pro-license) and [API plan comparison](https://support.deepl.com/hc/en-us/articles/360021200939-DeepL-API-plans). API Growth is the current paid upgrade option; no upgrade was performed. The table distinguishes published policies, screenshot evidence and user confirmation. No claim of universal zero retention or universal no-training is established.
 
 ## Recommended settings and evidence
 
-1. OpenAI: inspect Settings → Organization → Data controls, including sharing at organization and project levels. Keep feedback, evaluation/fine-tuning data sharing, and API input/output sharing disabled for real records. Record the actual selection; do not infer it from defaults. Check retention controls separately. A screenshot should exclude keys, tokens and billing details.
-2. Azure: inspect Custom Translator workspace documents and models. Record what remains and whether it is synthetic or real. Ordinary translation and deliberate custom-model training must be described separately. Do not delete existing training or audit material as part of this review.
-3. DeepL: confirm API Free versus API Pro in the account. Recommend API Pro for real-record testing after reviewing applicable terms; keep Free evaluation synthetic until reviewed. No paid upgrade is authorized by this recommendation.
+1. OpenAI: keep the reviewed sharing options and optional API call logging disabled. Verify runtime credentials belong to the reviewed organization before relying on these settings for a specific workflow. Disabled call logging is not Zero Data Retention.
+2. Azure: the displayed dictionary has been reviewed. Ordinary translation and deliberate custom-model training must be described separately. No training material or models were deleted, trained or published during this review.
+3. DeepL: keep API Developer evaluation synthetic. Review API Growth terms and obtain approval before any paid upgrade or use of real records. No paid upgrade is authorized by this recommendation.
 4. Minimize outbound data: preserve authoritative repair records inside iSolve; prepare a separate provider payload that omits VINs, RO identifiers and contact details when they are unnecessary for language work. This is a proposed improvement, not an implemented redaction control.
 5. Make `store: false` explicit on applicable OpenAI requests in a separately reviewed runtime change. It is not a substitute for disabling data sharing or for approved retention controls.
 
@@ -44,14 +44,15 @@ These are provider policy statements, not verification of iSolve account setting
 
 Provider deletion does not delete iSolve originals, English outputs, uploads, exports, local test copies, audit evidence, or backups. The existing application preserves historical identity/reporting attribution when access is deactivated. No universal automatic purge schedule has been verified.
 
-Proposed policy decision, not implemented: remove disposable real-record test copies and raw outputs within 30 days after their evaluation closes, unless a documented investigation or required retention applies. Preserve authoritative repair records and required audit evidence under the applicable dealership agreement. Decide backup expiry and privacy-request handling before promising a deletion deadline. Do not apply this proposal to existing immutable B2 evidence or staging records without a separate reviewed plan.
+Approved policy decision, implementation pending: delete disposable real-data testing copies and temporary AI outputs within 30 days after the relevant testing finishes. Jason explicitly accepted this rule. Original repair records, saved warranty stories and required audit history follow a separate retention schedule; they are not disposable testing copies. The approval does not authorize bulk deletion of existing immutable B2 evidence or staging records.
+
+Before enforcement or publication as an operating practice, identify covered copies and temporary outputs, record each test's completion date, assign a cleanup owner, and verify deletion and backup handling. Define any required preservation exceptions explicitly. No cleanup job or manual deletion was performed by this website change. Backup expiry and the separate authoritative-record schedule remain unresolved.
 
 ## Remaining publication questions
 
-- Actual OpenAI sharing/retention selections.
-- DeepL plan and whether any real records used that service.
-- Azure Custom Translator current uploads and models.
-- Approved iSolve retention/deletion rules and backup coverage.
+- Runtime account mapping and any Azure uploads outside the reviewed dictionary, if relevant to the disclosed workflows.
+- Implementation of the approved 30-day testing-copy rule, backup expiry, and privacy-request handling.
+- Separate retention schedules for authoritative records, saved warranty stories and audit history.
 
 Complete these in the privacy draft before removing its review notice. No runtime configuration or data deletion is part of this website PR.
 

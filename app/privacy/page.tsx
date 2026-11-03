@@ -239,24 +239,33 @@ const sections = [
           excludes model training by default unless an account opts in, but
           allows abuse-monitoring retention, generally up to 30 days with legal
           or safety exceptions.
+          The reviewed iSolve organization settings show feedback,
+          evaluation/fine-tuning, and input/output sharing disabled. API call
+          logging was disabled and saved during this review. These settings do
+          not establish Zero Data Retention.
         </p>
         <p>
           <a href="https://www.microsoft.com/en-us/translator/business/notrace">Microsoft’s text-translation policy</a>{" "}
           provides for no persistent storage or training on translation
           requests; separately uploaded Custom Translator training material is
           retained until deleted or account expiry.
+          The reviewed Custom Translator sentence dictionary contains five
+          generic English/Spanish pairs without vehicle or customer identifiers.
         </p>
         <p>
-          DeepL is also configured for evaluation, with retention and training
-          terms dependent on the API plan and features used. See{" "}
-          <a href="https://www.deepl.com/en/privacy">DeepL’s privacy policy</a>.
+          DeepL API Developer is configured for evaluation. Only made-up test
+          examples have been submitted to DeepL; no real vehicle or repair-order
+          data has been used there. Its{" "}
+          <a href="https://www.deepl.com/en/pro-license">terms</a>{" "}
+          allow indefinite retention of submitted content and prohibit
+          processing personal data through that plan.
           These provider policies do not determine how long iSolve retains its
           own source records, outputs or audit evidence.
         </p>
         <p className="review-note">
-          [ACCOUNT REVIEW REMAINS: VERIFY OPENAI SHARING AND RETENTION SETTINGS,
-          DEEPL API PLAN AND REAL-DATA USE, AND CURRENT AZURE CUSTOM TRANSLATOR
-          UPLOADS. DO NOT ASSERT UNIVERSAL ZERO RETENTION OR NO TRAINING.]
+          [REVIEW SCOPE: Azure evidence covers the displayed sentence dictionary,
+          not every workspace or model. Confirm runtime credentials use the
+          reviewed accounts. Do not assert universal zero retention or no training.]
         </p>
       </>
     ),
@@ -285,6 +294,14 @@ const sections = [
           We use administrative, technical, and organizational measures designed
           to protect information. No transmission or storage system is
           completely secure.
+        </p>
+        <p className="review-note">
+          [APPROVED POLICY — IMPLEMENTATION PENDING: Delete disposable real-data
+          testing copies and temporary AI outputs within 30 days after the
+          relevant testing finishes. Original repair records, saved warranty
+          stories, and required audit history follow a separate retention
+          schedule. Establish the cleanup process and backup handling before
+          presenting this deadline as an operating practice.]
         </p>
         <p className="review-note">
           [VERIFY THESE RETENTION, DELETION, BACKUP, ACCESS-CONTROL, AND

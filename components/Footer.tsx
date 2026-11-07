@@ -12,6 +12,8 @@ const footerLinks = [
   { label: "AI", href: "/ai" },
   { label: "Reporting", href: "/reporting" },
   { label: "Contact", href: "/contact" },
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms and SMS Terms", href: "/terms" },
 ];
 
 export default function Footer() {
@@ -28,7 +30,7 @@ export default function Footer() {
           <p className="mt-5">Copyright 2026 iSolve Automotive.</p>
         </div>
 
-        <nav className="flex flex-wrap gap-x-5 gap-y-3 md:max-w-md md:justify-end">
+        <nav aria-label="Footer" className="flex flex-wrap gap-x-5 gap-y-3 md:max-w-md md:justify-end">
           {footerLinks.map((link) => (
             <Link
               key={link.label}
